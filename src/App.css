@@ -1,18 +1,16 @@
 .App {
   text-align: center;
+  background-image: url(https://external-preview.redd.it/PnUSogsjICtBSiZTugVGrX-BPiBv8-xXfzl5iaTAX3I.jpg?auto=webp&s=02a9a44d48481df75490f2ed4eba9e8c45f3b7f3);
 }
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.appDiv{
+  margin:auto;
+  width:50%;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -25,14 +23,5 @@
 }
 
 .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #09d3ac;
 }
