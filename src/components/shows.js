@@ -1,11 +1,11 @@
 import React from "react";
-import {showStorage} from './showStorage';
+import {ShowStorage} from './showStorage';
 
 export class Shows extends React.Component{
     render(){
         return this.props.shows.map(
             (show)=>{
-                return <showStorage show={show} key={show._id} Reload={this.props.Reload}></showStorage>
+                return <ShowStorage show={show} key={show._id} ReloadData={this.props.ReloadData}></ShowStorage>
             }
         );
     }

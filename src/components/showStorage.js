@@ -17,6 +17,7 @@ export class ShowStorage extends React.Component {
             .catch();
     }
     render() {
+        if (!this.props || !this.props.show) return null;
         return (
             <div>
                 <Card style={{ width: '18rem' }}>
@@ -32,5 +33,6 @@ export class ShowStorage extends React.Component {
                 </Card>
             </div>
         );
+
     }
 }

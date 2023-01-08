@@ -1,7 +1,10 @@
 const express = require('express')
+//const cors = require('cors');
 const app = express()
 const port = 4000
 var bodyParser = require('body-parser')
+
+//app.use(cors());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -9,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-/*
+//---------------------//
 const cors = require('cors');
 app.use(cors());
 app.use(function (req, res, next) {
@@ -18,7 +21,8 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept");
   next();
-});*/
+});
+//----------------------//
 
 // Handles any requests that don't match the ones above
 const path = require('path');
@@ -85,7 +89,7 @@ app.delete('/api/show/:id',(req, res)=>{
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
-res.sendFile(path.join(__dirname+'/../build/index.html'));
+res.sendFile(path.join(__dirname+'/../build/index.html'));//--------------------------//
 });
 
 app.listen(port, () => {
