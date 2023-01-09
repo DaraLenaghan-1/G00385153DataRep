@@ -21,8 +21,10 @@ import {
 } from 'react-router-dom';
 
 class App extends React.Component {
-  render() {
+  render() { //render method to dispay other componets 
     return (
+      // navigation bar
+      // routing allows navigation
       <Router>
         <div className="App">
           <Navbar bg="dark" variant="dark">

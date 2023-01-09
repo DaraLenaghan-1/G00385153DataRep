@@ -98,6 +98,7 @@ app.get('*', (req,res) =>{
 res.sendFile(path.join(__dirname+'/../build/index.html'));//--------------------------//
 });
 
+//connect to port
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
