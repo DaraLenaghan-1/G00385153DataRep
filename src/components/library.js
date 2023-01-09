@@ -33,6 +33,7 @@ export class Library extends React.Component {
             })
     }
 
+    //array with show details 
     state = {
         show: []
     }
@@ -45,6 +46,7 @@ export class Library extends React.Component {
                         <div>
                             <h3>Here is all our Show contributed</h3>
                             <center>
+                                {/* display all plan states */}
                                 <Show show={this.state.show} ReloadData={this.ReloadData}></Show>
                             </center>
                         </div>

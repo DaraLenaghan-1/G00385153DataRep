@@ -9,9 +9,14 @@ export class ShowStorage extends React.Component {
         super();
         this.DeleteShow = this.DeleteShow.bind(this);
     }
+
+    // delete show function
+    //invoked when delete button clicked
     DeleteShow(e) {
         e.preventDefault();
 
+        //make a HTTP Request with Delete method and pass as part of the
+        //url
         axios.delete('http://localhost:4000/api/show/' + this.props.show._id)
             .then((res) => { this.props.Reload(); })
             .catch();
