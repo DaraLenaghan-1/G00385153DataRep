@@ -30,7 +30,7 @@ export class AddShow extends React.Component {
             ShowDescription: this.state.ShowDescription
         }
 
-        axios.post('http://localhost:4000/api/shows', show)
+        axios.post('http://localhost:4000/api/show', show)
             .then()
             .catch();
 

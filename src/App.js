@@ -27,11 +27,11 @@ class App extends React.Component {
         <div className="App">
           <Navbar bg="dark" variant="dark">
             <Container>
-              <Navbar.Brand href="/">Navbar</Navbar.Brand>
+              <Navbar.Brand href="/">GuideCentral</Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/showStorage">Show Storage</Nav.Link>
-                <Nav.Link href="/addShow">Add Shows</Nav.Link>
+                <Nav.Link href="/addShow">Add Show</Nav.Link>
                 <NavDropdown title="Genres" id="collasible-nav-dropdown">
                   <NavDropdown.Item href="/action">Action</NavDropdown.Item>
                   <NavDropdown.Item href="/comedy">Comedy</NavDropdown.Item>

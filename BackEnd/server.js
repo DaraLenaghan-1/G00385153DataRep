@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //---------------------//
+//cors
 const cors = require('cors');
 app.use(cors());
 app.use(function (req, res, next) {
@@ -24,6 +25,8 @@ app.use(function (req, res, next) {
 });
 //----------------------//
 
+// Serve the static files from the show app
+// build project
 // Handles any requests that don't match the ones above
 const path = require('path');
 app.use(express.static(path.join(__dirname, '../build')));
@@ -31,6 +34,7 @@ app.use('/static', express.static(path.join(__dirname, 'build//static')));
 
 //mongodb+srv://admin:<password>@cluster0.8taek.mongodb.net/?retryWrites=true&w=majority
 // getting-started.js
+//mongoose.set('strictQuery', true);
 const mongoose = require('mongoose');
 main().catch(err => console.log(err));
 async function main() {
@@ -38,13 +42,14 @@ async function main() {
   // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
 }
 
+//Defined schema 
 const showSchema = new mongoose.Schema({
   ShowName: String,
   ShowPic: String,
   ShowDescription: String
 });
 
-const showModel = mongoose.model('fdgdfgdfgdfg', showSchema);
+const showModel = mongoose.model('shows', showSchema);
 
 app.post('/api/shows',(req,res)=>{
   console.log(req.body);
@@ -58,20 +63,21 @@ app.post('/api/shows',(req,res)=>{
   res.send('Data Recieved');
 })
 
+// a  route point that find shows and gets it to display 
 app.get('/api/shows', (req, res) => {
   showModel.find((error, data)=>{
     res.json(data);
   })
 })
 
-app.get('/api/show/:id', (req, res)=>{
+app.get('/api/shows/:id', (req, res)=>{
   console.log(req.params.id);
   showModel.findById(req.params.id,(error,data)=>{
     res.json(data);
   })
 })
 
-app.put('/api/show/:id', (req, res)=>{
+app.put('/api/shows/:id', (req, res)=>{
   console.log("Update: "+req.params.id);
 
   showModel.findByIdAndUpdate(req.params.id, req.body, {new:true},

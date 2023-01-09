@@ -30,7 +30,7 @@ export class Home extends React.Component {
         {/*Social media section */}
         <font color="white"></font><h4 align="left">Find GuideCentral on various social media sites:</h4>
         <h5 align="left"> <img align="left" src="https://banner2.cleanpng.com/20180802/czs/kisspng-malta-blockchain-summit-ad-fraud-advertising-indus-twitter-logo-png-5b6352722ae8d6.4341314915332358261758.jpg" height="30" width="30"></img><a href="https://twitter.com">Twitter</a></h5>
-        <h5 align="left"><img align="left" src="https://image.flaticon.com/icons/png/512/124/124010.png" height="30" width="30"></img><a href="https://facebook.com">Facebook</a></h5>
+        <h5 align="left"><img align="left" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfbKjVw-Jec7BN-UUaF6MGv_MKsLWfcQO8SkfykmE&s" height="30" width="30"></img><a href="https://facebook.com">Facebook</a></h5>
         <h5 align="left"><img align="left" src="https://png.pngtree.com/png-clipart/20190517/original/pngtree-instagram-icon-png-image_3584853.jpg" height="30" width="30"></img><a href="https://instagram.com">Instagram</a></h5>
 
         <br></br>

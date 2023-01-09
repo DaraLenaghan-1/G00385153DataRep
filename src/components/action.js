@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import Logo from './logo.png';
 
 export class Action extends React.Component {
 
